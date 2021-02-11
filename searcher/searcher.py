@@ -20,8 +20,8 @@ class AlgoSearcher:
         self.ids = ids
 
     def get_coordinates(self, v_id: int) -> tuple:
-        """Return coordinates of the top right corner of the square to which the vertex belongs.
-		
+        """Return coordinates of the bottom right corner of the square to which the vertex belongs.
+
 		This function will help to compute heuristic cost by using approximate square coordinate information.
 
 		:param v_id: a given vertex id
@@ -38,7 +38,7 @@ class AlgoSearcher:
         """Return heuristic cost for A-star informed search.
 		
 		This function will compute Euclidian distance between the current vertex and the goal vertex
-		by using the coordinates of the top right corners of the squares on which the vertices stand.
+		by using the coordinates of the bottom right corners of the squares on which the vertices stand.
 		This will help provide a sense of direction to the informed graph search,
 		whereby movement in any direction is allowable.
 

@@ -102,9 +102,9 @@ def parse_src_and_dest(data: str) -> tuple:
 
 
 def compute_square_coordinates(height: int = 10, width: int = 10) -> list:
-    """Compute coordinates of the top right corner for each square on the 10x10 grid.
+    """Compute coordinates of the bottom right corner for each square on the 10x10 grid.
 
-    This function will store the coordinate information of the top right corner of each square for subsequent use.
+    This function will store the coordinate information of the bottom right corner of each square for subsequent use.
     Indices in the resultant lists are equal to respective Square IDs.
 
     :param height: height of the grid, defaults to 10
@@ -116,11 +116,13 @@ def compute_square_coordinates(height: int = 10, width: int = 10) -> list:
     """
     square_coordinates = []
 
-    # initialize location of the bottom left corner of the grid
+    # initialize location of the top left corner of the grid (square 0)
     loc_x, loc_y = 0, 0
 
+    # move down 10 times
     for i in range(height):
-        loc_x = loc_x + height
+        loc_x = loc_x - height
+        # move right 10 times
         for j in range(width):
             loc_y = loc_y + width
             square_coordinates.append((loc_x, loc_y))
