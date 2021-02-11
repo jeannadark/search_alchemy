@@ -77,10 +77,16 @@ Any inputted file should follow the same format as the default to enable accurat
 
 1. module ``find_shortest_path.py`` contains the function ``runner()`` that parses the data, constructs the graph and computes the shortest path using two search strategies. Shortest path information is then printed to the console, i.e. cost of the path, path itself and run-time of each implemented strategy.
 2. module ``input_reader.py`` contains such functions as ``parse_vertex_and_square_ids()``, ``parse_edges_and_weights()`` and ``parse_src_and_dest()`` that read the input file in the appropriate format.
-3. module ``grapher.py``contains the undirected graph class ``UGraph`` by using the parsed graph edge data.
+3. module ``grapher.py``contains the undirected graph class ``UGraph`` that constructs the graph by using the parsed graph edge data.
 4. module ``searcher.py`` contains the ``AlgoSearcher`` class that implements informed and uninformed searches on the undirected graph.
 
 ### Performance Comparison
 
+For the default-given start and goal vertices (0 and 99), the performance of A* vs UCS is as follows:
+
+|  Metric  |      A*       |   UCS    |
+|----------|:-------------:|---------:|
+| visited  |  10 nodes     | 73 nodes |
+| run-time |  0.0015 sec   | 0.002 sec|
 
 
