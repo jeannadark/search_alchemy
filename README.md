@@ -19,7 +19,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
       <ul>
-        <li><a href="#performance-comparison">Performance Comparison</a></li>
+    <li><a href="#performance-comparison">Performance Comparison</a></li>
       </ul>
   </ol>
 </details>
