@@ -37,7 +37,7 @@ class AlgoSearcher:
     def compute_euclidian_distance(self, current_v: int, goal_v: int) -> float:
         """Return heuristic cost for A-star informed search.
 		
-		This function will compute Euclidian distance between the current vertex and the goal vertex
+		This function will compute the square root of Euclidian distance between the current vertex and the goal vertex
 		by using the coordinates of the bottom right corners of the squares on which the vertices stand.
 		This will help provide a sense of direction to the informed graph search,
 		whereby movement in any direction is allowable.
@@ -46,13 +46,13 @@ class AlgoSearcher:
 		:type current_v: int
 		:param goal_v: the destination vertex for the search
 		:type goal_v: int
-		:return: euclidian distance between the top right corners of squares to which vertices belong
+		:return: square root of euclidian distance between the top right corners of squares to which vertices belong
 		:rtype: float
 		"""
         (x1, y1) = self.get_coordinates(current_v)
         (x2, y2) = self.get_coordinates(goal_v)
 
-        euclidian_distance = np.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+        euclidian_distance = np.sqrt(np.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2))
 
         return euclidian_distance
 
