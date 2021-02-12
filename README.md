@@ -86,7 +86,7 @@ For the default-given start and goal vertices (0 and 99), the performance of A* 
 
 |  Metric  |      A*       |   UCS    |
 |----------|:-------------:|---------:|
-| visited  |  10 nodes     | 73 nodes |
-| run-time |  0.0015 sec   | 0.002 sec|
+| visited  |  34 nodes     | 73 nodes |
+| run-time |  ~0.003 sec   | ~0.003 sec|
 
 
