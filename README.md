@@ -82,7 +82,7 @@ Any inputted file should follow the same format as the default to enable accurat
 
 The heuristic function that was implemented within the ``AlgoSearcher`` class works as follows:
 
-It computes the square root of the Euclidian distance between the current vertex and the goal vertex by using the coordinates of the bottom right corners of the squares to which vertices belong. This helps provide a sense of direction to the informed graph search, whereby movement in any direction is allowable. The cost is admissible since it's less than the actual cost (plus, for any start and goal vertices, UCS and A* find the same shortest path).
+It computes the square root of the Euclidian distance between the current vertex and the goal vertex by using the coordinates of the bottom right corners of the squares to which vertices belong. This helps provide a sense of direction to the informed graph search, whereby movement in any direction is allowable. The cost is admissible since it's less than the actual cost (plus, for any start and goal vertices, UCS and A* find the same shortest path), yet it does not significantly underestimate the cost of the next move.
 
 ### Performance Comparison
 
