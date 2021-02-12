@@ -80,7 +80,8 @@ Any inputted file should follow the same format as the default to enable accurat
 3. module ``grapher.py``contains the undirected graph class ``UGraph`` that constructs the graph by using the parsed graph edge data.
 4. module ``searcher.py`` contains the ``AlgoSearcher`` class that implements informed and uninformed searches on the undirected graph.
 
-The heuristic function that was implemented works as follows:
+The heuristic function that was implemented within the ``AlgoSearcher`` class works as follows:
+
 It computes the square root of the Euclidian distance between the current vertex and the goal vertex by using the coordinates of the bottom right corners of the squares to which vertices belong. This helps provide a sense of direction to the informed graph search, whereby movement in any direction is allowable.
 
 ### Performance Comparison
