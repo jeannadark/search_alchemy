@@ -67,8 +67,10 @@ To run this code, one argument is taken from the command line: file name.
 
 Example of how to run the program:
 ``` sh
-    find_shortest_path.py somefile.txt
+    find_shortest_path.py
 ```
+This will prompt the user to input the file name they want to parse.
+
 If the file is not found, the default `p1_graph.txt` in this directory is used instead.
 
 Any inputted file should follow the same format as the default to enable accurate parsing of graph data.
