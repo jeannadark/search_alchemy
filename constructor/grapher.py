@@ -17,8 +17,6 @@ class UGraph:
         :param w: weight of the edge between src and dest
         :type w: int
         """
-        w = w / 10  # divide by 10 to fix for grid size
-
         self.graph[src].append((dest, w))
         self.graph[dest].append((src, w))
 
